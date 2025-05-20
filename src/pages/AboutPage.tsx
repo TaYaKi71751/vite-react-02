@@ -52,7 +52,7 @@ const AboutPage: React.FC = () => {
                     </Col>
                     {/* 이미지 섹션 */}                     
                     <Col md={6}>
-                        <img src='/image/member.jpg' width={"50%"} alt="대표 이미지" />
+                        <img src={`${import.meta.env.BASE_URL}/image/member.jpg`} width={"50%"} alt="대표 이미지" />
                     </Col>                 
                 </Row>             
             </Container>         

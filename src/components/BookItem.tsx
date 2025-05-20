@@ -11,7 +11,7 @@ const BookItem : React.FC<BookItemProps> = ({ book }) => {
             <Card className="border rounded shadow-sm p-3" style={{ height: '500px', width: '300px' }}>
                     <Card.Body>
                         <Card.Img 
-                            variant="top" src={`/image/${book.id + 1}.jpg`} 
+                            variant="top" src={`${import.meta.env.BASE_URL}/image/${book.id + 1}.jpg`} 
                             style={{ height: '240px', width: '173px', objectFit: 'cover' }}
                             alt={book.title}                          
                         />

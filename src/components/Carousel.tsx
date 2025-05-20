@@ -8,7 +8,7 @@ const MyCarousel: React.FC = () => {
         <div className="carousel-item-custom">
             <img
               className="fixed-size-img"               
-                src = '/image/5.jpg'
+                src = {`${import.meta.env.BASE_URL}/image/5.jpg`}
                 alt="First slide"
             />
         </div>
@@ -17,7 +17,7 @@ const MyCarousel: React.FC = () => {
         <div className="carousel-item-custom">
           <img
             className="fixed-size-img"             
-            src = '/image/6.jpg'             
+            src = {`${import.meta.env.BASE_URL}/image/6.jpg`}
             alt="Second slide"
           />
         </div>
@@ -26,7 +26,7 @@ const MyCarousel: React.FC = () => {
         <div className="carousel-item-custom">
           <img
             className="fixed-size-img"             
-            src = '/image/7.jpg'             
+            src = {`${import.meta.env.BASE_URL}/image/7.jpg`}
             alt="Second slide"
          />
         </div>

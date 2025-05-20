@@ -47,7 +47,7 @@ const DetailPage: React.FC = () => {
                         <Card className="border-0">
                             <Card.Img 
                                 variant="top"                          
-                                src = {'/image/' + (book.id + 1) + '.jpg'}                             
+                                src = {`${import.meta.env.BASE_URL}/image/${(book.id + 1)}.jpg`}                             
                                 style={{ borderRadius: '8px' }}                         
                             />
                         </Card>
