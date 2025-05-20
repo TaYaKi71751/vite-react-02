@@ -8,10 +8,11 @@ import {Provider} from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import store, {persistor} from './data/store';
 
+console.log(import.meta.env)
 createRoot(document.getElementById('root')!).render(
   <Provider store = {store}>
     <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter basename={process.env.PUBLIC_URL} >
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <App />
       </BrowserRouter>
     </PersistGate>

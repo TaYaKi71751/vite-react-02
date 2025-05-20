@@ -1,4 +1,5 @@
 import { Container, Nav, Navbar, Col, Row, Card, Button } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import MyCarousel from "../components/Carousel";
 import bookdata, {Book} from "../data/Bookdata";
 import { useState } from "react";
@@ -23,19 +24,19 @@ const Content : React.FC = () => {
         <div>
             <Navbar style={{ backgroundColor: '#4169E1' }} data-bs-theme="dark">           
                 <Container>
-                    <Navbar.Brand href = "/"><h1>BookStore</h1></Navbar.Brand>             
+                    <Navbar.Brand as={Link} to = "/"><h1>BookStore</h1></Navbar.Brand>             
                     <Nav className="me-auto">
-                        <Nav.Link href = "/">Home</Nav.Link>               
-                        <Nav.Link href = "/about">About</Nav.Link>               
-                        <Nav.Link href = "/list">Product</Nav.Link>               
-                        <Nav.Link href = "/contact">Contact</Nav.Link>             
+                        <Nav.Link as={Link} to = "/">Home</Nav.Link>               
+                        <Nav.Link as={Link} to = "/about">About</Nav.Link>               
+                        <Nav.Link as={Link} to = "/list">Product</Nav.Link>               
+                        <Nav.Link as={Link} to = "/contact">Contact</Nav.Link>             
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/login" className="d-flex align-items-center">
+                        <Nav.Link to="/login" className="d-flex align-items-center">
                             <PersonFill size={20} className="me-2" />
                             Login
                         </Nav.Link>    
-                        <Nav.Link href="/cart" className="d-flex align-items-center">
+                        <Nav.Link to="/cart" className="d-flex align-items-center">
                             <BasketFill size={20} className="me-2" />
                             Cart
                         </Nav.Link>                 

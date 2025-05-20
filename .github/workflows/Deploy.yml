@@ -24,19 +24,6 @@ jobs:
         run: npm run build
         env:
           CI: false
-      - name: Post-build cleanup
-        run: |
-          node << 'EOF'
-            const fs = require('fs');
-            const path = require('path');
-            const packageJson = require('./package.json');
-            const indexPath = path.join(`${process.env.PWD}`, 'dist', 'index.html');
-            const notFoundPath = path.join(`${process.env.PWD}`, 'dist', '404.html');
-            const indexContent = fs.readFileSync(indexPath, 'utf8');
-            const updatedContent = indexContent.replaceAll(`"/assets`, `"${packageJson.homepage}/assets`);
-            fs.writeFileSync(indexPath, updatedContent);
-            fs.writeFileSync(notFoundPath, updatedContent);
-          EOF
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
