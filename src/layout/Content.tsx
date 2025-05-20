@@ -32,11 +32,11 @@ const Content : React.FC = () => {
                         <Nav.Link as={Link} to = "/contact">Contact</Nav.Link>             
                     </Nav>
                     <Nav>
-                        <Nav.Link to="/login" className="d-flex align-items-center">
+                        <Nav.Link as={Link} to="/login" className="d-flex align-items-center">
                             <PersonFill size={20} className="me-2" />
                             Login
                         </Nav.Link>    
-                        <Nav.Link to="/cart" className="d-flex align-items-center">
+                        <Nav.Link as={Link} to="/cart" className="d-flex align-items-center">
                             <BasketFill size={20} className="me-2" />
                             Cart
                         </Nav.Link>                 
