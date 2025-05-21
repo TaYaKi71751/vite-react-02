@@ -24,8 +24,8 @@ const CartPage: React.FC = () => {
                 <thead>
                     <tr>
                         <th>상품정보</th>
-                        <th>수량</th>
                         <th>상품금액</th>
+                        <th>수량</th>
                         <th>주문하기</th>
                     </tr>
                 </thead>
